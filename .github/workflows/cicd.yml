@@ -33,7 +33,7 @@ jobs:
         mkdir -p ~/.ssh
         echo "${{ secrets.SSH_KEY }}" > ~/.ssh/cicd
         chmod 600 ~/.ssh/cicd
-        ssh -o StrictHostKeyChecking=no -i ~/.ssh/cicd ubuntu@54.227.63.56 << '+'
+        ssh -o StrictHostKeyChecking=no -i ~/.ssh/cicd ubuntu@54.236.26.160 << '+'
         
         sudo docker stop cicd || true
         sudo docker rm cicd || true
