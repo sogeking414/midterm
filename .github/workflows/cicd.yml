@@ -38,7 +38,7 @@ jobs:
         sudo docker stop cicd || true
         sudo docker rm cicd || true
         sudo docker pull ${{ secrets.DOCKER_USERNAME }}/cicd:latest
-        sudo docker run -d --name cicd -p 22:22 ${{ secrets.DOCKER_USERNAME }}/midterm:latest
+        sudo docker run -d --name cicd -p 22:22 ${{ secrets.DOCKER_USERNAME }}/cicd:latest
         +
 
     - name: successful completion
