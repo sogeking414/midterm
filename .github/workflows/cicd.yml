@@ -32,7 +32,7 @@ jobs:
       run: |
         mkdir -p ~/.ssh
         echo "${{ secrets.SSH_KEY }}" > ~/.ssh/cicd
-        chmod 600 ~/.ssh/midterm
+        chmod 600 ~/.ssh/cicd
         ssh -o StrictHostKeyChecking=no -i ~/.ssh/cicd ubuntu@54.227.63.56 << '+'
         
         sudo docker stop cicd || true
